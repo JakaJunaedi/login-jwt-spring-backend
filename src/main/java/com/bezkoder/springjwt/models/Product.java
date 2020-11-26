@@ -22,19 +22,24 @@ public class Product {
     private  String kategori;
     @Column(name = "harga")
     private String harga;
+    @Column(name = "gambar")
+    private String gambar;
 
     public Product() {
 
     }
 
-    public Product(String nama, String kategori, String harga) {
+    public Product(String nama, String kategori, String harga, String gambar) {
         super();
 
 
         this.nama = nama;
         this.kategori = kategori;
         this.harga = harga;
+        this.gambar = gambar;
     }
+
+
 
     public long getId() {
         return id;
@@ -67,4 +72,8 @@ public class Product {
     public void setHarga(String harga) {
         this.harga = harga;
     }
+
+    public String getGambar() { return gambar; }
+
+    public void setGambar(String gambar) { this.gambar = gambar; }
 }
